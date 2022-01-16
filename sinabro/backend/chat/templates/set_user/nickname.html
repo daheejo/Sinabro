@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-woori">
+        <img src = "/static/jumping-woori.png" />  
+        <h1>당신의 닉네임을 만들어주세요 :)</h1>
+
+        <form method="POST" id="chat-box">
+            {% csrf_token %}
+            <textarea name="contents" placeholder="닉네임 입력"></textarea>
+            <input name="submit-btn" type="submit" class="button" value="생성" />
+        </form>
+    </div>    
+    <style>
+        @font-face {
+        font-family: 'Cafe24SsurroundAir';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        .welcome-woori {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family:'Cafe24SsurroundAir';
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        
+        }
+
+        #chat-box {
+            margin-top: 10px;
+        }
+
+        input {
+            font-family:'Cafe24SsurroundAir' ;
+            font-weight: bold;
+        }
+    </style>
+</div>
+</body>
+</html>

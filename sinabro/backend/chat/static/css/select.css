@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.select_title {
+    font-family:'Cafe24SsurroundAir' ;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0px
+
+}
+
+.select-act {
+    /* padding: 10px 0px; */
+    overflow:auto;
+    width: 330px;
+    height: 500px;
+
+
+}
+
+h5 {
+    font-weight: bold;
+    font-family: 'GmarketSansMedium';
+
+}
+
+p {
+    font-family: 'GmarketSansMedium';
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.act {
+    text-align: center;
+    padding: 10px 0px;
+    
+}
+
+.actset {
+    font-weight: bolder;
+}
+.button{
+    font-family:'GmarketSansMedium' ;
+    margin-top: 10px;
+}

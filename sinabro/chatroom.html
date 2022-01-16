@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="../style.css"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+
+<body>
+    <div class="status-bar">
+        <h4>당신의 마음을 시나브로.</h4>
+    </div>
+
+    <header class="screen-header">
+        <h1 class="screen-header__title">오늘 하루도 건강히 기분좋게 ✌</h1>
+    </header>
+
+    <a id="friends-display-link">
+        우리와의 채팅이 시작되었습니다.
+    </a>
+
+    <div class="messages">
+        <div class="incoming-msg">
+            <img src="./woori/chat/templates/chat/photo/woori.jpg" class="woori__avatar" />
+                <div class="incoming__text">
+                    <h4 class="incoming__title">우리</h4>              
+                        <div class="received-msg">
+                            <p>this is a test msg.</p>
+                            <span class="time"> 11:01 AM    |    June 9</span>
+                        </div>
+                </div>
+        </div>
+        <div class="outgoing-msg">
+            <img src="./woori/chat/templates/chat/photo/" class="user__avatar">
+                <div class="outgoing__text">
+                    <h4 class="outgoing__title">USER</h4>              
+                        <div class="sent-msg">
+                            <p>yeees! this is a test message between you and me!</p>
+                            <span class="time"> 11:01 AM    |    June 9</span>
+                        </div>
+                </div>
+        </div>
+
+        
+  <form method="GET" id="chat-box">
+      <input name="input-chat" type="text" placeholder="우리한테 아무거나 하고싶은 말!" />
+      <input name="submit-btn" type="submit" value="전송" />
+  </form>
+</div>
+
+
+<script src="https://kit.fontawesome.com/571fd11ea9.js" 
+    crossorigin="anonymous">
+    </script>
+
+    
+
+</body>
+</html>

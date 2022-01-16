@@ -1,0 +1,46 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="menu_title">행동 일지 기록</h1>
+            {% for post in posts %}
+            <article class="media">
+                <div class="media-content">
+                    날짜 : {{ post.pub_date }}<br/>
+                    행동 : {{ post.action }}<br/>
+                    평점 :
+                    {% if post.star == 1%}
+                    ⭐️
+                    {% elif post.star == 2 %}
+                    ⭐️⭐️
+                    {% elif post.star == 3 %}
+                    ⭐️⭐️⭐️
+                    {% elif post.star == 4 %}
+                    ⭐️⭐️⭐️⭐️
+                    {% elif post.star == 5 %}
+                    ⭐️⭐️⭐️⭐️⭐️
+                    {% endif %}<br>
+                    메모 : 
+                    {{ post.memo }}
+                    <br>
+                    {% endfor %}
+                </div>
+            </article>
+        <div class="home">
+            <button type="button" class="button" 
+            onclick="location.href='/start/'">
+            홈으로 돌아가기
+            </button>
+        </div>
+    </div>
+</body>
+</html>

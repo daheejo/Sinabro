@@ -1,0 +1,22 @@
+<div style="padding:10px 200px 10px 200px;">
+    {% if latest_message_list %}
+        <ul>
+        {% for message in latest_message_list %}
+            {% if message.user %}
+                <p align="right"> [ {{ message.send_text }} ]  {{ message.pub_date }} : ME</p>
+            {% else %}
+                <p align="left">WOORI : [ {{ message.send_text }} ]  {{ message.pub_date }}</p>
+            {% endif %}
+        {% endfor %}
+        </ul>
+        
+    {% else %}
+        <p>No Message</p>
+    {% endif %}
+
+    <form method="POST" align="center">
+        {% csrf_token %}
+        <textarea rows="2" cols="50" name="contents"></textarea>
+        <input type="submit" value="send">
+    </form>
+</div>

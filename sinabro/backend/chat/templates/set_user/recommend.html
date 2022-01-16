@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/recommend1.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="menu_title">상담소 찾기</h1>
+        <div id="map">
+	        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3816f017f37d990ce23fe397547b098a"></script>
+	        <script>
+		        var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+                var container = document.getElementById('map');
+                var options = {
+                center: new kakao.maps.LatLng(36.635169, 127.461480),
+                level: 5
+                };
+
+                var map = new kakao.maps.Map(container, options);
+
+                var content = {
+                title: "박경숙심리상담센터",
+                latlng: new kakao.maps.LatLng(36.635169, 127.461480),
+                addr1: "충북 청주시 서원구 사직대로 127",
+                addr2:"유림빌딩 3층",
+                detail: "detail",
+                tel: "043-272-7020",
+                };
+
+
+                var imageSize = new kakao.maps.Size(24, 35);
+
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+                var marker = new kakao.maps.Marker({
+                    map: map, 
+                    position: content.latlng, 
+                    title: content.title, 
+                    image: markerImage 
+                }); 
+                (function(marker, place) {
+      
+                    kakao.maps.event.addListener(marker, 'click', function() {
+                    var overlay = new kakao.maps.CustomOverlay({
+        
+                    content:'<div class="wrap">' +
+                                '<div class="info">' +
+                                    '<div class="loca-title">' +
+                                        place.title +
+                                    '</div>' +
+                                '</div>'+
+                                '<div class="body">' +
+                                    '<div class="desc">' +
+                                        '<div class="ellipsis">' + place.addr1+'<br>'+place.addr2 + '</div>' +
+                                            '<div class="jibun ellipsis">' + place.tel + '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>',
+                    map: map,
+                    position: marker.getPosition()
+                });
+         
+         kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+         overlay.setMap(null)
+         })
+         console.log(overlay);
+         overlay.setMap(map);
+      })
+      })(marker, content)
+
+      
+
+            </script><br/>
+
+        </div>        
+        <button type="button" class="button" onclick="location.href='/start/'">
+        홈으로 돌아가기
+        </button>
+    </div>
+</body>
+</html>

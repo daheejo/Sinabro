@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="welcome-woori">
+        <img src = "/static/jumping-woori.png"  />   
+        <h1 class="loading-title">당신의 마음을 시나브로</h1>
+        <h3 class="loading-subtitle">챗봇 우리와 함께하는 멘탈케어</h3>
+    </div>  
+    <style>
+        @font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+
+        @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+        .welcome-woori {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+
+
+
+img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .loading-title {
+            font-family:'Cafe24SsurroundAir';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+ 
+        }
+
+        .loading-subtitle {
+            font-family:'GmarketSansMedium';
+            font-weight: lighter;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+        }
+    </style>
+</body>
+
+<script>
+    $ (document).ready(function(){
+        setTimeout(function(){
+            if (window.location == 'http://127.0.0.1:8000/'){
+                window.location.href='http://127.0.0.1:8000/select_nuser/';}}, 3000)
+    })
+</script>
+</html>

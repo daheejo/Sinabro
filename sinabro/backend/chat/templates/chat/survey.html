@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/survey.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    rel="stylesheet">
+</head>
+
+<body>
+    <div class="status-bar">
+        <h6 class = "header_subtitle">당신의 마음을 <b>시나브로</b></h6>
+    </div>
+
+    <header class="screen-header">
+        <h3 class="header_title">우리와 마음을 진단해보자!</h3>
+    </header>
+    
+<div class="messages">
+    {% if latest_message_list %}
+    <div class="chat_container">
+        {% for message in latest_message_list %}
+            {% if message.user %}
+            <div class="outgoing-msg">
+                <img src="/static/user-solid.svg" class="user__avatar"/>
+                <p class = "box" id='user_box'>
+                    <span id = "avatar">Me</span><br>
+                    <span id = "avt-msg">{{ message.send_text }}</span><br> 
+                    <span id = "avt-msg-date">{{ message.pub_date }}</span> 
+            </div>    
+            {% else %}
+            <div class="incoming-msg">
+                <img src="/static/woori.jpg" class="woori__avatar" />
+                <p class = "box" id='woori_box'>
+                    <span id = "avatar">우리</span><br> 
+                    <span id = "avt-msg">{{ message.send_text }}</span><br>  
+                    <span id = "avt-msg-date">{{ message.pub_date }}</span>
+                </p>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>깨끗하게 재시작!</p>
+    {% endif %}
+{% if num_a == 10 %}
+<div>
+    <button type="button" class="button" 
+    onclick="location.href='/chat/survey_result/'">
+        결과 확인
+    </button>
+</div>
+{% else %}
+</div>
+    <form method="POST" id="chat-box">
+        {% csrf_token %}
+        <input type="text" name ="contents" class="input" id="typing-chat" placeholder="우리에게 알려줘!" />
+        <input class="button" id="submit-btn" type="submit" value="전송" />
+    </form>
+</div>
+{% endif %}
+<div class="nav-btn">
+    <button type="button" class="button" id="all-delete"
+    onclick="location.href='/chat/survey/delete/'">
+        메시지 모두 삭제
+    </button>
+    <button type="button" class="button" 
+    onclick="location.href='/start/'">
+    홈
+    </button>
+</div>
+
+
+
+<script src="https://kit.fontawesome.com/571fd11ea9.js" 
+    crossorigin="anonymous", 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+</script>
+<script src="{% static 'css/chatroom.js' %}"></script>
+
+</body>
+</html>
+

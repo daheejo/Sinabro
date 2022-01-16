@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="menu">
+            <h1 class='menu_title'>행동 케어</h1>
+        </div>
+        <img src="/static/jumping-woori.png"  />
+        <button type="button" class="button" 
+        onclick="location.href='/start/'">
+            홈으로 돌아가기
+        </button>
+        <button type="button" class="button" 
+        onclick="location.href='/activities/select/'">
+            행동 선택하기
+        </button>
+        <button type="button" class="button" 
+        onclick="location.href='/activities/do/'">
+            행동 실천하기
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/select.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="select_title">행동 선택하기</h1>
+        <form action="" method="post" class="select-act">
+            <div class=act>
+                <h5 class="actset">자연친화적</h5>
+                <p>
+                    {% for nature in natures %}
+                    {{ nature }}
+                    <input class="select-opt" type="checkbox" name="selected" value="{{ nature }}">
+                    {% endfor %}<br>
+                </p>
+            </div>
+            <div class=act>
+                <h5 class="actset">도시친화적</h5>
+                <p>
+                    {% for city in cities %}
+                    {{ city }}
+                    <input class="select-opt" type="checkbox" name="selected" value="{{ city }}">
+                    {% endfor %}<br>
+                </p>
+                
+            </div>
+            <div class=act>
+                <h5 class="actset">인간친화적</h5>
+                <p>
+                    {% for person in persons %}
+                    {{ person }}
+                    <input class="select-opt" type="checkbox" name="selected" value="{{ person }}">
+                {% endfor %}<br>
+                </p>
+                
+            </div>    
+        </form>
+        <button type="submit" class="button" onclick="location.href='/activities/do/'">저장</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 마음을 시나브로</title>
+    <link rel="stylesheet" href="{% static 'css/write_action.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class= "menu_title">행동 일지 작성</h1>
+        <div class="field">
+            행동 : {{ action }}<br>
+            평점 : <br>
+            메모 :
+            <form method="POST" id="chat-box">
+                {% csrf_token %}
+                <textarea name="contents" class="textarea" placeholder="행동 후 너의 감정 변화를 알려줘!"></textarea>
+                <input name="submit-btn" class="button" type="submit" value="전송" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

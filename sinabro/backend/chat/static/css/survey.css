@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.status-bar {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.header_subtitle {
+    font-family: 'Cafe24SsurroundAir';
+    font-size: 12px;
+
+}
+
+
+.screen-header {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.header_title {
+    font-family: 'GmarketSansMedium';
+    text-align: center;
+    font-size: 20px;
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+.chat_container {
+    overflow:auto; 
+    height:360px; 
+    width: 400px;
+    padding: 40px;
+}
+
+#incoming-msg {
+    display: flex;
+    align-items: flex-start;
+}
+
+#outgoing-msg {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.woori__avatar, .user__avatar {
+    width:70px;
+    height: 70px;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+
+.box {
+    font-family: 'GmarketSansMedium';
+    font-weight: lighter;
+    font-size: small;
+}
+
+#user_box {
+    text-align: right;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+.woori__avatar{
+    margin-bottom: 10px;
+}
+    
+
+#woori_box {
+    margin-bottom: 20px;
+}
+#avatar{
+    font-size: large;
+    font-weight: bold;
+}
+
+#avt-msg-date {
+    font-size: x-small;
+}
+
+#all-delete {
+    text-align: center;
+}
+
+#chat-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* width: 80%; */
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#typing-chat {
+    width: 500px;
+    height: 50px;
+    font-family: 'GmarketSansMedium';
+}
+
+#submit-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 50px;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.button {
+    margin-top: 10px;
+    font-family:'Cafe24SsurroundAir';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}

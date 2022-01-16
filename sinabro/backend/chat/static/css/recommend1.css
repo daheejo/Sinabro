@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+
+.menu_title {
+    font-family: 'Cafe24SsurroundAir';
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+.button {
+    margin-top: 10px;
+    font-family:'Cafe24SsurroundAir';
+    font-weight: bold;
+}
+
+#map {
+    width:300px;height:400px;
+}
+
+.wrap{
+    position: relative;
+	background: #ffffff;
+	border: 4px solid white;
+    width: 200px;
+    bottom: 130px;
+}
+
+.wrap:after, .wrap:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.wrap:after {
+    border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.wrap:before {
+    border-color: rgba(194, 225, 245, 0);
+	border-top-color: white;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+.loca-title{
+    text-align: center;
+    font-weight: bold;
+    right:20px ;
+}
+
+.ellipsis, .jibun ellipse{
+    text-align: center;
+    font-size: small;
+}
