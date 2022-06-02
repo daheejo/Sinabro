@@ -3,10 +3,10 @@
   <img src="https://user-images.githubusercontent.com/74031552/150959081-52bb946b-b449-4cf4-8bb7-199a11444338.gif">
   </p>
   <h2>About 시나브로</h2>
-<h4>
+<p>
   시나브로는 사용자가 AI 챗봇과의 채팅을 통해 자신의 이야기에 대한 공감을 얻고 위안을 받아 스스로 스트레스 및 부정적 감정을 케어할 수 있도록 하는 멘탈케어 서비스입니다.<br>
  우울감을 느끼고 있는 사람들이 챗봇 우리와의 대화를 통해 부정적 감정을 올바르게 다스리고 스트레스를 건강하게 해소할 수 있는 방식을 스스로 케어할 수 있도록 합니다:)<br>
-
+  </p>
 </h4>
   <h2>Services</h2>
   <p align="center">
@@ -35,3 +35,16 @@
   </h5>  
   <h2>Prize</h2>
   <li>2021 초광역 메타버스 아이디어톤 창업경진대회 아이디어상 수상</li>
+  <h2>How to Run</h2>
+  <p>시나브로는 Anaconda 가상환경에서 Django 기반으로 빌드되었습니다.</p>
+  <ul>
+  <li>Python과 Anaconda를 설치합니다.</li>
+  <li>conda 환경 터미널에 들어가서 backend 파일로 이동 후 'conda activate sinabro' 를 입력합니다.</li>
+  <li>python manage.py makemigraiton 을 입력합니다.</li>
+  <li>python manage.py makemigraiton 을 입력합니다.</li>
+  <li>python manage.py migrate 을 입력합니다.</li>
+  <li>python manage.py runserver 을 입력합니다.</li>
+  
+  
+  
+  </ul>
